@@ -42,7 +42,7 @@ public class UserController {
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String join(@ModelAttribute("USER") UserDto userDto) {
 		userService.join(userDto);
-		return "redirect:/";
+		return "redirect:/ulist";
 	}
 
 	@RequestMapping(value = "/user_detail", method = RequestMethod.GET)

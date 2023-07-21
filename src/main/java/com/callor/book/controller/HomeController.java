@@ -50,7 +50,7 @@ public class HomeController {
 	public String input(@ModelAttribute("BOOK") BookDto bookDto) {
 		int result = bookService.insert(bookDto);
 		if (result > 0) {
-			return "redirect:/";
+			return "redirect:/books";
 		} else {
 
 			return "book/input";
