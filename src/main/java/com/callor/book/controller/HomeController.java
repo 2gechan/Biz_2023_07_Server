@@ -26,11 +26,10 @@ public class HomeController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
+	public String home() {
 
-		List<BookDto> bookList = bookService.selectAll();
-		model.addAttribute("BOOKLIST", bookList);
-		return "book/list";
+		
+		return "main";
 	}
 
 	@RequestMapping(value = "/books", method = RequestMethod.GET)
