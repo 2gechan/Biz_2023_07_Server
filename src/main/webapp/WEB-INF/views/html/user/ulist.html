@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <section layout:fragment="content">
+    <table class="main user">
+      <tr>
+        <th>회원코드</th>
+        <th>회원명</th>
+        <th>전화번호</th>
+        <th>주소</th>
+        <th>유효계정유무</th>
+      </tr>
+
+      <tr th:each="user : ${USERLIST}" th:data-id="${user.u_code}">
+        <td th:text="${user.u_code}">회원코드</td>
+        <td th:text="${user.u_name}">회원명</td>
+        <td th:text="${user.u_tel}">전화번호</td>
+        <td th:text="${user.u_addr}">주소</td>
+        <td th:text="${user.u_use}">유효계정유무</td>
+      </tr>
+    </table>
+  </section>
+</html>

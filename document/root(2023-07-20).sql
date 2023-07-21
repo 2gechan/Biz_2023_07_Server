@@ -1,0 +1,1 @@
+-- mycarDB root로 접속

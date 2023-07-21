@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <section layout:fragment="content">
+    <form
+      class="main user update"
+      method="POST"
+      th:action="@{/user/user_detail}"
+    >
+      <div class="input">
+        <label for="">회원코드</label>
+        <input
+          id="u_code"
+          name="u_code"
+          placeholder="회원코드"
+          th:value="${USER.u_code}"
+          readonly
+        />
+      </div>
+      <div class="input">
+        <label for="">회원명</label>
+        <input
+          id="u_name"
+          name="u_name"
+          placeholder="회원명"
+          th:value="${USER.u_name}"
+        />
+      </div>
+      <div class="input">
+        <label for="">전화번호</label>
+        <input
+          id="u_tel"
+          name="u_tel"
+          placeholder="전화번호"
+          th:value="${USER.u_tel}"
+        />
+      </div>
+      <div class="input">
+        <label for="">주소</label>
+        <input
+          id="u_addr"
+          name="u_addr"
+          placeholder="주소"
+          th:value="${USER.u_addr}"
+        />
+      </div>
+      <div class="input">
+        <label for="">유효계정유무</label>
+        <input
+          id="u_use"
+          name="u_use"
+          placeholder="유효계정유무"
+          th:value="${USER.u_use}"
+        />
+      </div>
+
+      <div class="input button">
+        <button id="u_btn_update" type="button">수정</button>
+      </div>
+    </form>
+  </section>
+</html>

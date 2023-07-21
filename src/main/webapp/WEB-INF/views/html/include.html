@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <header class="main" th:fragment="header">
+    <h1>도서 대여 프로그램</h1>
+  </header>
+
+  <nav class="main" th:fragment="nav">
+    <ul>
+      <li class="home">Home</li>
+      <li class="input">도서정보추가</li>
+      <li class="books">도서정보</li>
+      <li class="join">회원등록</li>
+      <li class="ulist">회원정보</li>
+    </ul>
+  </nav>
+
+  <footer th:fragment="footer">
+    <address>CopyRight &copy; github.com/2gechan</address>
+  </footer>
+</html>

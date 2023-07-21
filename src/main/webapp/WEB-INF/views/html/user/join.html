@@ -1,0 +1,38 @@
+<html
+  lang="ko"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <section layout:fragment="content" class="user">
+    <form action="" class="user" method="POST">
+      <div>
+        <label for="u_code">회원코드</label>
+        <input
+          type="text"
+          id="u_code"
+          name="u_code"
+          th:value="${USER.u_code}"
+          readonly
+        />
+      </div>
+      <div>
+        <label for="u_name">회원명</label>
+        <input type="text" id="u_name" name="u_name" />
+      </div>
+      <div>
+        <label for="u_tel">전화번호</label>
+        <input type="phone" id="u_tel" name="u_tel" />
+      </div>
+      <div>
+        <label for="u_addr">주소</label>
+        <input type="text" id="u_addr" name="u_addr" />
+      </div>
+      <div>
+        <label for="u_use">유효계정유무</label>
+        <input type="text" id="u_use" name="u_use" />
+      </div>
+      <div><button>회원등록</button></div>
+    </form>
+  </section>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <section layout:fragment="content">
+    <form class="main book update" method="POST" th:action="@{/book_detail}">
+      <div class="input">
+        <label for="">도서코드</label>
+        <input
+          id="b_code"
+          name="b_code"
+          placeholder="도서코드"
+          th:value="${BOOK.b_code}"
+          readonly
+        />
+      </div>
+      <div class="input">
+        <label for="">도서명</label>
+        <input
+          id="b_name"
+          name="b_name"
+          placeholder="도서명"
+          th:value="${BOOK.b_name}"
+        />
+      </div>
+      <div class="input">
+        <label for="">저자</label>
+        <input
+          id="b_auther"
+          name="b_auther"
+          placeholder="저자"
+          th:value="${BOOK.b_auther}"
+        />
+      </div>
+      <div class="input">
+        <label for="">출판사</label>
+        <input
+          id="b_comp"
+          name="b_comp"
+          placeholder="출판사"
+          th:value="${BOOK.b_comp}"
+        />
+      </div>
+      <div class="input">
+        <label for="">구입연도</label>
+        <input
+          id="b_year"
+          name="b_year"
+          placeholder="구입연도"
+          th:value="${BOOK.b_year}"
+        />
+      </div>
+      <div class="input">
+        <label for="">구입가격</label>
+        <input
+          id="b_iprice"
+          name="b_iprice"
+          placeholder="구입가격"
+          th:value="${BOOK.b_iprice}"
+        />
+      </div>
+      <div class="input">
+        <label for="">대여가격</label>
+        <input
+          id="b_rprice"
+          name="b_rprice"
+          placeholder="대여가격"
+          th:value="${BOOK.b_rprice}"
+        />
+      </div>
+      <div class="input">
+        <label for="">사용유무</label>
+        <input
+          id="b_use"
+          name="b_use"
+          placeholder="사용유무"
+          th:value="${BOOK.b_use}"
+        />
+      </div>
+      <div class="input button">
+        <button id="b_btn_update" type="button">수정</button>
+      </div>
+    </form>
+  </section>
+</html>

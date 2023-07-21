@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+  lang="ko"
+  xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{/home}"
+>
+  <section layout:fragment="content">
+    <table class="main book">
+      <tr>
+        <th>도서코드</th>
+        <th>도서명</th>
+        <th>저자</th>
+        <th>출판사</th>
+        <th>구입연도</th>
+        <th>구입가격</th>
+        <th>대여가격</th>
+      </tr>
+
+      <tr th:each="book : ${BOOKLIST}" th:data-id="${book.b_code}">
+        <td th:text="${book.b_code}">도서코드</td>
+        <td th:text="${book.b_name}">도서명</td>
+        <td th:text="${book.b_auther}">저자</td>
+        <td th:text="${book.b_comp}">출판사</td>
+        <td th:text="${book.b_year}">구입연도</td>
+        <td th:text="${book.b_iprice}">구입가격</td>
+        <td th:text="${book.b_rprice}">대여가격</td>
+      </tr>
+    </table>
+  </section>
+</html>

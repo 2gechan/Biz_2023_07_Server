@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ltraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도서 대여 프로그램</title>
+
+    <link th:href="@{/static/css/main.css}" rel="stylesheet" />
+    <link th:href="@{/static/css/input.css}" rel="stylesheet" />
+    <script th:inline="javascript">
+      var rootPath = /*[[@{/}]]*/ "";
+    </script>
+
+    <script th:src="@{/static/js/main_input.js}"></script>
+    <script th:src="@{/static/js/main_nav.js}"></script>
+  </head>
+  <body th:with="LOGIN = ${session.LOGINUSER}">
+    <header th:replace="~{include :: header}" />
+    <nav th:replace="~{include :: nav}" />
+
+    <section class="main" layout:fragment="content">
+      <h1>Body Main</h1>
+    </section>
+
+    <footer th:replace="~{include :: footer}" />
+  </body>
+</html>
